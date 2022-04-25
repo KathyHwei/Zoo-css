@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>bunny Animation</title>
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style/bunny.css" />
+        
+        <style media ="tear">
+            .tear{
+            /* Border */
+                background-color: cornflowerblue;
+                border-radius: 0px 50% 50% 50%;
+
+                /* Angle at the top */
+                position:absolute;
+                bottom: 40px;
+                left:49px;
+                transform: rotate(45deg);
+
+                /* Size */
+                height: 6px;
+                width: 6px;
+                transition:opacity 2s ease-in-out;
+            }   
+        </style>
+
+        <script type="text/javascript">
+            function fadeOut(){
+                const tear=document.getElementsById('tear1');           
+                tear.style.opacity = 'o'; 
+            }
+        </script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="goodbyemove">
+            <div class="bunny"><!--dk why but z-index wasn't placing them over each other but editing the order the divs in the html file fixed that as a result Its feet, body, then head so that the head will be in front of everything -->
+                <div class="feet" ><!--linking something to this div-->
+                    <div class="bun-fbpaw"></div>
+                    <div class="bun-bbfoot"></div>
+                </div>
+                <div class="bodymove">
+                    <div class="neck"></div>
+                    <div class="bun-body"></div>
+                    <div class="bun-tail"></div>
+                    <div class="bun-blegs"></div>
+                </div>
+                <div class="feet"><!--linking something to this div-->
+                    <div class="bun-fpaw"></div>
+                    <div class="bun-bfoot"></div>
+                </div>
+                <div class="headmove">
+                    <div class="bun-rightear"></div>
+                    <div class="bun-leftear"></div>
+                    <div class="bun-head"></div>
+                    <div class="bun-eye"></div>
+                    <div class="eyelid"></div>
+                </div>
+                <div id = "tear1" class="tear"></div>
+            </div>
+        </div>
+            <button type="button" onclick="fadeout()">goodbye</button>
+        </div>
+        
+    </body>
+</html>
