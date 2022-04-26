@@ -5,38 +5,14 @@
         <title>bunny Animation</title>
         <!-- Stylesheet -->
         <link rel="stylesheet" href="style/bunny.css" />
-        
-        <style media ="tear">
-            .tear{
-            /* Border */
-                background-color: cornflowerblue;
-                border-radius: 0px 50% 50% 50%;
-
-                /* Angle at the top */
-                position:absolute;
-                bottom: 40px;
-                left:49px;
-                transform: rotate(45deg);
-
-                /* Size */
-                height: 6px;
-                width: 6px;
-                transition:opacity 2s ease-in-out;
-            }   
-        </style>
-
-        <script type="text/javascript">
-            function fadeOut(){
-                const tear=document.getElementsById('tear1');           
-                tear.style.opacity = 'o'; 
-            }
-        </script>
+        <link rel="stylesheet" href="style/gogo.js">
     </head>
     <body>
 
         <div class="container">
-            <div class="goodbyemove">
-            <div class="bunny"><!--dk why but z-index wasn't placing them over each other but editing the order the divs in the html file fixed that as a result Its feet, body, then head so that the head will be in front of everything -->
+            <div class="bunny">
+                <!--dk why but z-index wasn't placing them over each other but editing the order the divs in the html file fixed that as a result Its feet, body, then head so that the head will be in front of everything -->
+                <div class="goodbyemove" id="moveout">
                 <div class="feet" ><!--linking something to this div-->
                     <div class="bun-fbpaw"></div>
                     <div class="bun-bbfoot"></div>
