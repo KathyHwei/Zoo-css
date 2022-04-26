@@ -1,4 +1,7 @@
-.container {
+/*this is all the shapes for the white/gray bunny*/
+/*along with the constrants the div is located that houses the bunny*/
+
+.container {/*.container box that serves as the backdrop of the bunny*/
   height: 350px;
   width: 350px;
   position: absolute;
@@ -9,7 +12,7 @@
   background-image:url(grass.png);
   background-position: center;
 }
-.bunny {
+.bunny {/*this is where in the container the bunny is located and constraned to*/
   height: 70px;
   width: 70px;
   border-radius: 90px 90px 130px ;  /*top left, top right, bottom left, bottom right clockwise*/
@@ -18,6 +21,19 @@
   right: 100px;
 
 }
+
+/*this is where I put the animations so I can group shapes to the same animation*/
+.headmove{
+  animation:headtilt 5s infinite ;
+}
+.bodymove{
+  animation: btwitch 10s infinite;
+}
+.feet{
+  animation: feetshift 10s infinite;
+}
+
+/*The start of the shapes and labeled as such*/
 .bun-head{
   background-color: white;
   height: 65px;
@@ -29,21 +45,8 @@
   z-index: 0;
   box-shadow: 1px -1px darkgray;
 }
-.headmove{
-  animation:headtilt 5s infinite ;
-}
-.bodymove{
-  animation: btwitch 10s infinite;
 
-}
-.goodbyemove{
-
-}
-.feet{
-  animation: feetshift 10s infinite;
-}
-
-.bun-rightear {
+.bun-rightear {/*This is the top ear its named right because originally both the ears were on the top of the head*/
   height: 60px;
   width: 15px;
   background-color: darkgray;
@@ -59,30 +62,31 @@
   transform-origin: bottom;
   
 }
-.bun-leftear {
+.bun-leftear {/*This is the bottom ear*/
   height: 60px;
   width: 15px;
   background-color: lightgray;
   position: absolute;
   bottom: -70px;
   left: 10px;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; 
   z-index: 5;
   transform: rotate(30deg);
   animation: twitch 6s infinite;
+  /*you may ask 'doesn't this already have a animation like in the div headmove? yes it does and I have this so the ears also twitch/move independently from the head*/
   box-shadow: -2px 10px gray;
 
   transform-origin: top;
   
 }
 
-.neck{
+.neck{/*this is the bump that can be seen below the head and above the body shape*/
   background-color: white;
   height: 70px;
   width: 80px;
   border-radius: 50px 90px 99px 90px;  /*top left, top right, bottom left, bottom right clockwise*/
   position: absolute;
-  top: 15px; /* how high the head is*/
+  top: 15px; 
   left: -30px;
   z-index: 0;
   box-shadow: -1px 2px lightgray;
@@ -94,7 +98,7 @@
   width: 25px;
   border-radius: 0px 90px 99px 90px;  /*top left, top right, bottom left, bottom right clockwise*/
   position: absolute;
-  top: 20px; /* how high the head is*/
+  top: 20px; 
   left: -80px;
   z-index: 2;
   transform: rotate(-10deg);
@@ -114,7 +118,7 @@
   box-shadow: -2px 1px darkgray;
 }
 
-.bun-blegs{
+.bun-blegs{/*bleg meaning back-leg meaning its the hind thigh that is in the foreground*/
   background-color:white;
   position: absolute;
   height: 42px;
@@ -128,7 +132,8 @@
   
 
 }
-.bun-bbfoot{
+.bun-bbfoot{  /*bbfoot meaning back-background foot meaning its the hind foot that is not in the foreground */
+
   background-color:darkgray;
   position: absolute;
   height: 15px;
@@ -140,8 +145,7 @@
   z-index: -1;
   box-shadow: 1px 0px gray;
 }
-
-.bun-bfoot{
+.bun-bfoot{/*bfoot meaning back-foot meaning its the hind foot that is in the foreground*/
   background-color:white;
   position: absolute;
   height: 17px;
@@ -154,7 +158,8 @@
   box-shadow: 1px -1px darkgray;
 
 }
-.bun-fpaw{
+
+.bun-fpaw{/*fpaw meaning front-paw meaning its the front foot that is in the foreground*/
   background-color: white;
   position: absolute;
   height: 15px;
@@ -167,8 +172,7 @@
   box-shadow: -1px 2px gray;
 
 }
-
-.bun-fbpaw{
+.bun-fbpaw{/*fbpaw meaning front-background-paw meaning its the front foot that is in the background*/
   background-color:darkgray;
   position: absolute;
   height: 15px;
@@ -208,12 +212,25 @@
   z-index: 3;
 
 }
+.tear{
+      background-color: cornflowerblue;
+      border-radius: 0px 50% 50% 50%;
 
+      position:absolute;
+      bottom: 35px;
+      left:49px;
+      transform: rotate(45deg);
+
+      height: 6px;
+      width: 6px;
+      transition:opacity 2s ease-in-out;
+    } 
+  
+/*the animations!*/
 @keyframes eyeshift {
   from {background-color: red;}
   to {background-color: black;}
 }  
-
 @keyframes bunblink {
   0%   {bottom:-15px;}
   25%  {bottom:-20px;}
@@ -260,7 +277,6 @@
   }
 
 }
-
 @keyframes feetshift {
   0%  {transform: rotate(0deg);}
   25%  {transform: rotate(-2deg); }
@@ -269,4 +285,3 @@
   100%  { transform: rotate(0deg);}
 
 }
-
