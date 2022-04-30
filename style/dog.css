@@ -1,4 +1,4 @@
-.bunny {
+.dog {
   background-color: white;
   height: 65px;
   width: 70px;
@@ -8,94 +8,7 @@
   right: 50px;
   z-index: 1;
 }
-.bun-ear {
-  height: 40px;
-  width: 15px;
-  background-color: darkgray;
-  position: absolute;
-  bottom: 60px;
-  left: 8px;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  z-index: 2;
-  box-shadow: 30px 55px darkgray;
 
-}
-.bun-body {
-  background-color: white;
-  height: 80px;
-  width: 90px;
-  border-radius: 70px 60px 70px 80px;  /*top left, top right, bottom left, bottom right clockwise*/
-  position: absolute;
-  top: 20px; /* how high the butt is*/
-  right: 50px;
-  z-index: 0;
-
-}
-.bun-blegs{
-  background-color:lightgray;
-  position: absolute;
-  height: 42px;
-  width: 55px;
-  border-radius: 70px 60px 70px 80px;  /*top left, top right, bottom left, bottom right clockwise*/
-  
-  top: 55px;; /* how low the leg is*/
-  right: 80px;
-  z-index: 3;
-  
-
-}
-.bun-bfoot{
-  background-color:lightgray;
-  position: absolute;
-  height: 15px;
-  width: 30px;
-  border-radius: 70px 60px 70px 80px;  /*top left, top right, bottom left, bottom right clockwise*/
-  
-  top: 90px; /* how low the leg is*/
-  right: 80px;
-  z-index: 4;
-  box-shadow: 5px 4px darkgray;
-
-}
-.bun-fpaw{
-  background-color: white;
-  position: absolute;
-  height: 15px;
-  width: 30px;
-  border-radius: 70px 60px 70px 80px;  /*top left, top right, bottom left, bottom right clockwise*/
-  
-  top: 85px; /* how low the leg is*/
-  right: 45px;
-  z-index: 1;
-  box-shadow: 5px 4px darkgray;
-
-}
-
-.bun-fbpaw{
-  background-color:darkgray;
-  position: absolute;
-  height: 15px;
-  width: 30px;
-  border-radius: 70px 60px 70px 80px;  /*top left, top right, bottom left, bottom right clockwise*/
-  
-  top: 70px; /* how low the leg is*/
-  right: 45px;
-  z-index: -1;
-  box-shadow: 5px 4px darkslategray;
-}
-.bun-eye{
-  background-color: black;
-  position:absolute;
-  height: 12px;
-  width: 8px;
-  border-radius: 0 80px 0px 80px;  /*top left, top right, bottom left, bottom right clockwise*/
-  bottom:30px;
-  left:52px;
-  transform: rotate(-28deg);
-  animation-name: bun-blink;
-  animation-duration: 4s;
-  z-index: 3;
-}
 
 .dog-mouth{
   background-color: white;
